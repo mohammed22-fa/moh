@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="Style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!--responsive web https://www.w3schools.com/html/html_responsive.asp#gsc.tab=0-->
+    <script src="myFunctions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <title>prop</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">الصفحة الرئيسية</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+                <li><a class="active" href="#">العقارات</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <h1>
+         العقارات المتاحة
+    </h1>
+
+    <table>
+        <tr>
+            <th>المدينة</th>
+            <th>تفاصيل</th>
+            <th>الايجار</th>
+            <th>تفاصيل</th>
+            <th>اختيار</th>
+        </tr>
+        <tr>        <!-- first row is always visable -->
+            <td name="det1">دمشق</td> <!-- name the elements to be able to get them for last alert (show property details)-->
+            <td name="det1">شقة سكنية فارغة غرفتبن وصالة 110 م </td>
+            <td name="det1">SYP 1500000  </td>
+            <td>
+                <input type="checkbox" id="check1" value="det1" onclick="myCheckboxFunction('check1','detrow1')">
+            </td>
+            <td>
+                <input type="radio" id="prop1" name="sel_prop" value="det1">
+            </td>
+        </tr>
+        <tr name="detrow1" class="hiderow"><!--name the table row to be able to change style-->
+            <td name="det1">
+                المنطقة:كفرسوسة
+            </td>
+            <td colspan="2" name="det1">يوجد بلكون 14م</td>
+            <td colspan="2" name="det1"> طابق3</td>
+        </tr>
+        <tr name="detrow1" class="hiderow">
+            <td name="det1">
+                الملكية: طابو
+            </td>
+            <td colspan="2" name="det1"> يوجد كراج</td>
+            <td colspan="2" name="det1">  مفروش</td>
+        </tr>
+        <tr name="detrow1" class="hiderow">
+            <td dname="1" colspan="2"><img src="Img/1.jfif" /></td>
+            <td dname="1" colspan="2"><img src="Img/2.jfif" /></td>
+            <td dname="1" colspan="1"><img src="Img/3.jfif" /></td>
+
+        </tr>
+
+
+        <tr style="background-color:white">
+            <td name="det2">دمشق</td>
+            <td name="det2">محل تجاري 70 م </td>
+            <td name="det2"> SYP 1400000</td>
+            <td>
+                <input type="checkbox" id="check2" value="det2" onclick="myCheckboxFunction('check2','detrow2')">
+            </td>
+            <td>
+                <input type="radio" id="prop2" name="sel_prop" value="det2">
+            </td>
+        </tr>
+        <tr name="detrow2" class="hiderow" style="background-color:white">
+            <td name="det2">
+                المنطقة:الحمرا
+            </td>
+            <td colspan="2" name="det2">يوجد قبو</td>
+            <td colspan="2" name="det2">الطابق ارضي</td>
+        </tr>
+        <tr name="detrow2" class="hiderow" style="background-color:white">
+            <td name="det2">
+                الملكية:حكم محكمة
+            </td>
+            <td colspan="2" name="det2">يوجد كراج</td>
+            <td colspan="2" name="det2">مكسي </td>
+        </tr>
+        <tr name="detrow2" class="hiderow" style="background-color:white">
+            <td dname="det2" colspan="2"><img src="Img/4.jfif" /></td>
+            <td dname="det2" colspan="2"><img src="Img/5.jfif" /></td>
+            <td dname="det2" colspan="1"><img src="Img/6.jfif" /></td>
+        </tr>
+
+        <tr>
+            <td name="det3">حمص</td>
+            <td name="det3">  شقة سكنيية 170  م</td>
+            <td name="det3">SPY 900000 </td>
+            <td>
+                <input type="checkbox" id="check3" value="det3" onclick="myCheckboxFunction('check3','detrow3')">
+            </td>
+            <td>
+                <input type="radio" id="prop3" name="sel_prop" value="det3">
+            </td>
+        </tr>
+        <tr name="detrow3" class="hiderow">
+            <td name="det3">
+                المنطقة:فيروزة
+            </td>
+            <td colspan="2" name="det3">يوجد تراس 50 م</td>
+            <td colspan="2" name="det3"> الطابق الثالث</td>
+        </tr>
+        <tr name="detrow3" class="hiderow">
+            <td name="det3">
+                الملكية:طابو
+            </td>
+            <td colspan="2" name="det3">يوجد كراج</td>
+            <td colspan="2" name="det3">مفروش </td>
+        </tr>
+        <tr name="detrow3" class="hiderow">
+            <td dname="det3" colspan="2"><img src="Img/7.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/8.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/10.jfif" /></td>
+        </tr>
+
+        <tr style="background-color:white">
+            <td name="det4">دمشق</td>
+            <td name="det4">شقة سكنية غرفتين وصالة 140 م</td>
+            <td name="det4">SPY 1000000 </td>
+            <td>
+                <input type="checkbox" id="check4" value="det4" onclick="myCheckboxFunction('check4','detrow4')">
+            </td>
+            <td>
+                <input type="radio" id="prop4" name="sel_prop" value="det4">
+            </td>
+        </tr>
+        <tr name="detrow4" class="hiderow" style="background-color:white">
+            <td name="det4">
+                المنطقة:الزاهرة
+            </td>
+            <td colspan="2" name="det4">الاكساء سوبر ديلوكس</td>
+            <td colspan="2" name="det4">الطاق الثاني</td>
+        </tr>
+        <tr name="detrow4" class="hiderow" style="background-color:white">
+            <td name="det4">
+                الملكية:طابو اسهم
+            </td>
+            <td colspan="2" name="det4">الاتجاه شرقي قبلي</td>
+            <td colspan="2" name="det4">يوجد تراس مع مكان للشواء</td>
+        </tr>
+        <tr name="detrow4" class="hiderow" style="background-color:white">
+            <td dname="det3" colspan="2"><img src="Img/11.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/12.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/13.jfif" /></td>
+        
+
+        </tr>
+
+        <tr>
+            <td name="det5">دمشق</td>
+            <td name="det5">شقة سكنية غرفتين 70 م </td>
+            <td name="det5"> SPY 500000</td>
+            <td>
+                <input type="checkbox" id="check5" value="det5" onclick="myCheckboxFunction('check5','detrow5')">
+            </td>
+            <td>
+                <input type="radio" id="prop5" name="sel_prop" value="det5">
+            </td>
+        </tr>
+        <tr name="detrow5" class="hiderow">
+            <td name="det5">
+                المنطقة :المزة
+            </td>
+            <td colspan="2" name="det5">الاكساء سوبر ديلوكس</td>
+            <td colspan="2" name="det5">الطابق السابع</td>
+        </tr>
+        <tr name="detrow5" class="hiderow">
+            <td name="det5">
+                area: ddssd
+            </td>
+            <td colspan="2" name="det5">يوجد مصعد </td>
+            <td colspan="2" name="det5"> يوجد بلكون 10 م</td>
+        </tr>
+        <tr name="detrow5" class="hiderow">
+            <td dname="det3" colspan="2"><img src="Img/20.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/21.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/22.jfif" /></td>
+
+
+
+        </tr>
+        <tr style="background-color:white">
+            <td name="det6">ريف دمشق </td>
+            <td name="det6">مزرعة غرفتين وصالة مع مسابح مساحة 400000 م  </td>
+            <td name="det6">SPY 400000</td>
+            <td>
+                <input type="checkbox" id="check6" value="det6" onclick="myCheckboxFunction('check6','detrow6')">
+            </td>
+            <td>
+                <input type="radio" id="prop6" name="sel_prop" value="det6">
+            </td>
+        </tr>
+        <tr name="detrow6" class="hiderow" style="background-color:white">
+            <td name="det6">
+                المنطفة:صحناية
+            </td>
+            <td colspan="2" name="det6">يوجد مسبح كير </td>
+            <td colspan="2" name="det6">يوجد مسبح للاطفال</td>
+        </tr>
+        <tr name="detrow6" class="hiderow" style="background-color:white">
+            <td name="det6">
+                للاجار اليومي او الشهري
+            </td>
+            <td colspan="2" name="det4">يوجد مكان للشواء</td>
+            <td colspan="2" name="det4">يوجد صالة بليادو</td>
+        </tr>
+        <tr name="detrow6" class="hiderow" style="background-color:white">
+            <td dname="det3" colspan="3"><img src="Img/15.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/16.jfif" /></td>
+           
+
+
+
+        </tr>
+
+        <tr>
+            <td name="det7">حلب</td>
+            <td name="det7">شقة سكنية4 غرف وصالة170 م  </td>
+            <td name="det7">SPY 1500000</td>
+            <td>
+                <input type="checkbox" id="check7" value="det7" onclick="myCheckboxFunction('check7','detrow7')">
+            </td>
+            <td>
+                <input type="radio" id="prop7" name="sel_prop" value="det5">
+            </td>
+        </tr>
+        <tr name="detrow7" class="hiderow">
+            <td name="det7">
+                المنطفة:اشرف
+            </td>
+            <td colspan="2" name="det7">امام بناء الازاعة</td>
+            <td colspan="2" name="det7">الطابق الثاني</td>
+        </tr>
+        <tr name="detrow7" class="hiderow">
+            <td name="det7">
+                الملكية:طابو
+            </td>
+            <td colspan="2" name="det7"> يوجد مصعد والاكساء سوبر ديلوكس</td>
+            <td colspan="2" name="det7">يوجد تراس مساحة 50 م</td>
+        </tr>
+        <tr name="detrow7" class="hiderow">
+            <td dname="det3" colspan="2"><img src="Img/17.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/18.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/19.jfif" /></td>
+
+
+        </tr>
+
+        <tr style="background-color:white">
+            <td name="det8">طرطوس</td>
+            <td name="det8">شقة سياحية ثلاث غرق وصالة 150م</td>
+            <td name="det8">SPY 700000</td>
+            <td>
+                <input type="checkbox" id="check8" value="det8" onclick="myCheckboxFunction('check8','detrow8')">
+            </td>
+            <td>
+                <input type="radio" id="prop8" name="sel_prop" value="det8">
+            </td>
+        </tr>
+        <tr name="detrow8" class="hiderow" style="background-color:white">
+            <td name="det8">
+                المنطفة:الرمال
+            </td>
+            <td colspan="2" name="det8">مطلة على البحر</td>
+            <td colspan="2" name="det8">طابق تاني</td>
+        </tr>
+        <tr name="detrow8" class="hiderow" style="background-color:white">
+            <td name="det8">
+               للايجار اليومي او الشهري
+            </td>
+            <td colspan="2" name="det8">يوجد فيه تراس 50 م</td>
+            <td colspan="2" name="det8">يوجد مكان للشوي</td>
+        </tr>
+        <tr name="detrow8" class="hiderow" style="background-color:white">
+            <td dname="det3" colspan="2"><img src="Img/27.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/24.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/25.jfif" /></td>
+
+
+
+        </tr>
+
+        <tr>
+            <td name="det9">دمشق</td>
+            <td name="det9">محل تجاري50م </td>
+            <td name="det9">1500000</td>
+            <td>
+                <input type="checkbox" id="check9" value="det9" onclick="myCheckboxFunction('check9','detrow9')">
+            </td>
+            <td>
+                <input type="radio" id="prop9" name="sel_prop" value="det9">
+            </td>
+        </tr>
+        <tr name="detrow9" class="hiderow">
+            <td name="det9">
+                المنطقة :البزورية
+            </td>
+            <td colspan="2" name="det9">طابق اول</td>
+            <td colspan="2" name="det9">مكسي</td>
+        </tr>
+        <tr name="detrow9" class="hiderow">
+            <td name="det9">
+                الملكية: طابو
+            </td>
+            <td colspan="2" name="det9">متضمن قبو</td>
+            <td colspan="2" name="det9"> متضمن مكان لصف السيارة</td>
+        </tr>
+        <tr name="detrow9" class="hiderow">
+            <td dname="det3" colspan="2"><img src="Img/36.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/35.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/9.jfif" /></td>
+
+        </tr>
+        <tr style="background-color:white">
+            <td name="det10">الاذقية</td>
+            <td name="det10"> شقة سياحية غرفتين 110 م </td>
+            <td name="det10">SPY 800000</td>
+            <td>
+                <input type="checkbox" id="check10" value="det4" onclick="myCheckboxFunction('check10','detrow10')">
+            </td>
+            <td>
+                <input type="radio" id="prop10" name="sel_prop" value="det10">
+            </td>
+        </tr>
+        <tr name="detrow10" class="hiderow" style="background-color:white">
+            <td name="det10">
+                المنطفة :رأس اليسيط
+            </td>
+            <td colspan="2" name="det10">يوجد تراس</td>
+            <td colspan="2" name="det10">طابق اول</td>
+        </tr>
+        <tr name="detrow10" class="hiderow" style="background-color:white">
+            <td name="det10">
+                للاجار اليومي او الشهري
+            </td>
+            <td colspan="2" name="det10">مطلة على البحر</td>
+            <td colspan="2" name="det10">يوجد في التراس العاب للاطفال</td>
+        </tr>
+        <tr name="detrow10" class="hiderow" style="background-color:white">
+            <td dname="det3" colspan="2"><img src="Img/29.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/30.jfif" /></td>
+            <td dname="det3" colspan="2"><img src="Img/31.jfif" /></td>
+
+
+        </tr>
+
+
+    </table>
+
+
+    <button onclick="controlForm()" id='formcontrol' style="margin:10px;">متابعة</button>
+
+    <div id="myForm" style="display:none">
+        <div class="formcontainer">
+            <h1>نموذج تقديم لمكتب عقاري</h1>
+            <form id="real-estate-form">
+                <label for="fullName">الاسم الكامل:</label>
+                <input type="text" id="fullName" name="fullName" pattern="^[\u0600-\u06FF\s]+$" title="الرجاء إدخال أحرف هجائية فقط" placeholder="أدخل الاسم الكامل" required>
+
+                <label for="nationalId">الرقم الوطني:</label>
+                <input type="text" id="nationalId" name="nationalId" pattern="^(0[1-9]|1[0-4])[0-9]{9}$" title="الرقم الوطني يجب أن يكون مكون من 11 خانة" required>
+
+                <label for="birthDate">تاريخ الولادة:</label>
+                <input type="date" id="birthDate" name="birthDate" placeholder="yyyy-mm-dd">
+
+                <label for="mobileNumber">رقم الموبايل:</label>
+                <input type="text" id="mobileNumber" name="mobileNumber" pattern="^(09[3-68-9][0-9]{7})$" title="الرجاء إدخال رقم موبايل صحيح">
+
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" placeholder="أدخل البريد الإلكتروني">
+
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <span>IWB202 assignment F23</span>
+    </footer>
+
+</body>
+</html>
